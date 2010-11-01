@@ -1,0 +1,95 @@
+object Form1: TForm1
+  Left = 447
+  Height = 314
+  Top = 247
+  Width = 510
+  Caption = 'Ejemplo de TCollection'
+  ClientHeight = 314
+  ClientWidth = 510
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '0.9.28.2'
+  object Label1: TLabel
+    Left = 328
+    Height = 18
+    Top = 31
+    Width = 38
+    Caption = 'Título'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 328
+    Height = 18
+    Top = 79
+    Width = 36
+    Caption = 'Autor'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Height = 18
+    Top = 8
+    Width = 67
+    Caption = 'Contenido'
+    ParentColor = False
+  end
+  object lbMostrar: TListBox
+    Left = 8
+    Height = 272
+    Top = 33
+    Width = 288
+    ItemHeight = 0
+    TabOrder = 0
+    TopIndex = -1
+  end
+  object eTitulo: TEdit
+    Left = 328
+    Height = 27
+    Top = 47
+    Width = 168
+    TabOrder = 1
+  end
+  object btAdd: TButton
+    Left = 421
+    Height = 25
+    Top = 135
+    Width = 75
+    Caption = 'Añadir'
+    OnClick = btAddClick
+    TabOrder = 2
+  end
+  object eAutor: TEdit
+    Left = 328
+    Height = 27
+    Top = 95
+    Width = 168
+    TabOrder = 3
+  end
+  object btActualizar: TButton
+    Left = 216
+    Height = 25
+    Top = 3
+    Width = 80
+    Caption = 'Actualizar'
+    OnClick = btActualizarClick
+    TabOrder = 4
+  end
+  object btGuardar: TButton
+    Left = 328
+    Height = 25
+    Top = 248
+    Width = 168
+    Caption = 'Guardar en fichero'
+    OnClick = btGuardarClick
+    TabOrder = 5
+  end
+  object btCargar: TButton
+    Left = 328
+    Height = 25
+    Top = 280
+    Width = 168
+    Caption = 'Cargar fichero'
+    OnClick = btCargarClick
+    TabOrder = 6
+  end
+end

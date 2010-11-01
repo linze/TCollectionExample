@@ -1,0 +1,36 @@
+unit uLibro;
+
+{$mode objfpc}{$H+}
+
+interface
+
+    uses
+      Classes, SysUtils;
+
+    type
+
+        { TLibro }
+
+        TLibro = class(TCollectionItem)
+        private
+            FAutor: String;
+            FTitulo: String;
+        public
+            constructor Create;
+            property Titulo: String read FTitulo write FTitulo;
+            property Autor : String read FAutor write FAutor;
+        end;
+
+
+implementation
+
+{ TLibro }
+
+constructor TLibro.Create;
+begin
+    FAutor := '';
+    FTitulo := '';
+end;
+
+end.
+
