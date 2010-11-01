@@ -15,8 +15,6 @@ type
     TForm1 = class(TForm)
         btAdd: TButton;
         btActualizar: TButton;
-        btGuardar: TButton;
-        btCargar: TButton;
         eTitulo: TEdit;
         eAutor: TEdit;
         Label1: TLabel;
@@ -68,28 +66,6 @@ begin
     begin
         lbMostrar.Items.Add(Estante.Items[i].Titulo + ' / ' + Estante.Items[i].Autor);
     end;
-end;
-
-procedure TForm1.btCargarClick(Sender: TObject);
-var
-    FEstante : file of TEstante;
-begin
-    AssignFile (FEstante, 'patatita.bin');
-    Reset (FEstante);
-    Read (FEstante, Estante);
-    CloseFile (FEstante);
-    ShowMessage ('Archivo cargado con éxito');
-end;
-
-procedure TForm1.btGuardarClick(Sender: TObject);
-var
-    FEstante : file of TEstante;
-begin
-    AssignFile (FEstante, 'patatita.bin');
-    Rewrite(FEstante);
-    Write(FEstante, Estante);
-    CloseFile(FEstante);
-    ShowMessage ('Archivo guardaro con éxito');
 end;
 
 initialization
